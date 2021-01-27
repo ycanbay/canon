@@ -43,7 +43,7 @@ def build_tree(partition, k, a):
     right_points = []
 
     for point, distance in zip(partition.point, distances):
-        if distance >= partition.mu:
+        if distance < partition.mu:
             rhs.add_record(point)
         else:
             lhs.add_record(point)
